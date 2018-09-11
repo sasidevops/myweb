@@ -10,7 +10,7 @@ node{
       stage('Delpoy to tomcat'){
       
                               sshagent(['tomcat-dev']) {
-                              sh 'scp target/*.war /home/ec2-user/tomcat8/webapps/'
+                              sh 'scp target/*.war /opt/tomcat8/webapps/'
 }
 }
       
