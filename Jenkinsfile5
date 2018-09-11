@@ -10,7 +10,7 @@ node{
       stage('Delpoy to tomcat'){
       
                               sshagent(['tomcat-dev']) {
-                              sh '-o StrictHostKeyChecking=no target/*.war ec2-user@172.31.30.136:/opt/tomcat8/weapps'
+                              sh '-o StrictHostKeyChecking=no target/*.war opt/tomcat8/webapps/'
 }
 }
       
