@@ -1,0 +1,15 @@
+node{
+     stage('build'){
+                    git 'https://github.com/sasidevops/myweb'
+                    }
+     stage('Maven Package'){
+                   sh mvn clean package
+                         }
+      stage('Deploy'){
+                      archiveArtifacts 'target/myweb.war'
+                      }
+      }                
+                      
+     
+          
+                    
