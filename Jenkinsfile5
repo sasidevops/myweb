@@ -1,9 +1,11 @@
 node{
      stage('build'){
-                    git 'https://github.com/sasidevops/myweb'
+                     git 'https://github.com/sasidevops/myweb'
                     }
      stage('Maven Package'){
-                   sh 'mvn clean package'
+                            def mavenHome = tool name: 'maven-1', type: 'maven'
+                            sh "${mavenHome}/bin/mvn" package
+                   
                          }
       
       }                
