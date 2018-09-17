@@ -1,0 +1,8 @@
+node{
+      stage('Git checkout'){
+                            git 'https://github.com/sasidevops/myweb'    
+                           }
+      stage('Build package'){
+                            sh 'mvn clean package'
+                            }                     
+}
