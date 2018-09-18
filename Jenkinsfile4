@@ -12,5 +12,11 @@ node{
                                                
                                                }
                               }
+      stage('Email Notification'){
+                                 mail bcc: '', body: '''Jenkins email notification
+
+                                 Thanks
+                                 Sasi''', cc: '', from: '', replyTo: '', subject: 'Jenkins Mail', to: 'sasi.devops1311@gmail.com'
+                                 }
 
 }
