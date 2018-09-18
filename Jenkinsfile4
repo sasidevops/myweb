@@ -18,5 +18,8 @@ node{
                                  Thanks
                                  Sasi''', cc: '', from: '', replyTo: '', subject: 'Jenkins Mail', to: 'sasi.devops1311@gmail.com'
                                  }
+       stage(Slack Notification){
+                                    slackSend baseUrl: 'https://devops0509-aws.slack.com/services/hooks/jenkins-ci/', channel: 'build-new', color: 'good', message: 'jenkins job', teamDomain: 'devops0509-aws', tokenCredentialId: 'jenkins-slack-pipe'
+                                }    
 
 }
